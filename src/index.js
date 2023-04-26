@@ -14,7 +14,8 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
   localStorage.setItem('tasks',JSON.stringify(DATA))
   */
-  const DATA = JSON.parse(localStorage.getItem('tasks')) || [];
+ // const DATA = JSON.parse(localStorage.getItem('tasks')) || [];
+  const DATA = [];
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
