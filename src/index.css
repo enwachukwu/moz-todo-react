@@ -20,7 +20,7 @@ ul {
   padding: 0;
 }
 button {
-  border: none;
+ border-radius: 100px;
   margin: 0;
   padding: 0;
   width: auto;
@@ -45,20 +45,147 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  box-shadow: 0 0 80px black;
+ 
 }
+
+  .btn_group
+ {
+
+  border-radius: 20%;
+}  
+
 button,
 input {
   overflow: visible;
+
 }
 input[type="text"] {
   border-radius: 0;
+  background-color: #a7a7db;
+  color: white;
+  box-shadow: 0 0 10px black;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 50px solid green;
+  border-right: 50px solid green;
 }
+
+
+
+/* The message styling starts here */
+
+.message  {
+  background-color:    rgb(5, 3, 1);
+}
+.send_to{
+  padding: 15px;
+}
+.test_area{
+  padding-left: 10px;
+}
+.message{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  align-items: baseline;
+}
+.send_sms{
+  padding: 10px;
+  margin: 5px;
+}
+
+body .webcam{
+background-color: #040241;
+width: 100%;
+max-width: 70rem;
+margin: 0 auto;
+font: 1.6rem/1.25 Arial, sans-serif;
+align-items: center;
+
+}
+.webcam {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.webcam > * {
+  flex: 0 0 100%;
+}
+.btn{
+  display: block;
+}
+.message form {
+  display: grid;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+.take_photo{
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.view_photo{
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.triger_webcam{
+
+  max-width: 200px;;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stack-small{
+  margin-left: auto;
+  margin-right: auto;
+}
+.stack-large{
+  margin-left: auto;
+  margin-right: auto;
+}
+.popup_group{
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+}
+.btn_take_photo{
+  background-color: rgb(33, 66, 46);
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn_view_photo{
+  background-color: rgb(5, 88, 59);
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn_edit{
+  background-color:rgb(195, 133, 16);
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.webcam{
+  max-width: max-content;
+}
+
+/* End of webcam and message styling */
+
 body {
+
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #0c0303;
   color: #4d4d4d;
 }
 @media screen and (min-width: 620px) {
@@ -66,6 +193,20 @@ body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
+  .take_photo{
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
+  .view_photo{
+    max-width: 200pxrem;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
 }
 /*END RESETS*/
 /* GLOBAL STYLES */
@@ -92,6 +233,7 @@ body {
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
+
 .btn__filter {
   border-color: lightgrey;
 }
@@ -102,6 +244,7 @@ body {
 .btn-group {
   display: flex;
   justify-content: space-between;
+  
 }
 .btn-group > * {
   flex: 1 1 49%;
@@ -134,6 +277,14 @@ body {
   margin-top: 2.5rem;
 }
 @media screen and (min-width: 550px) {
+
+  .take_photo > *+*{
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+  }
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -146,11 +297,14 @@ body {
 }
 /* END GLOBAL STYLES */
 .todoapp {
-  background: #fff;
+   background: #09065af0; 
+
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  color: rgb(220, 213, 213);
+
 }
 @media screen and (min-width: 550px) {
   .todoapp {
